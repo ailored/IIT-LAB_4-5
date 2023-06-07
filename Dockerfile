@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:1.25
 
 WORKDIR /usr/share/nginx/html
 COPY . .

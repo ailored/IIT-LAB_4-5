@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    font: 16px Sans-Serif;
+    font: 16px sans-serif;
 }
 
 header {
