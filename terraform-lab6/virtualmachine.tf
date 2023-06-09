@@ -25,5 +25,5 @@ resource "azurerm_linux_virtual_machine" "linuxvm" {
     sku       = "22_04-lts-gen2"
     version   = "latest"
   }
-  user_data = filebase64("${path.module}/terraform-lab6/scripts/vm-init.sh")
+  user_data = filebase64("${path.module}/scripts/vm-init.sh")
 }
