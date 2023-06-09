@@ -39,8 +39,8 @@ jobs:
       run: terraform validate
         
     - name: Terraform Plan
-      run: terraform plan -var='ARM_SUBSCRIPTION_ID=${{ vars.TF_VAR_ARM_SUBSCRIPTION_ID }}' -var='ARM_CLIENT_ID=${{ vars.TF_VAR_ARM_CLIENT_ID }}' -var='ARM_CLIENT_SECRET=${{ secrets.TF_VAR_ARM_CLIENT_SECRET }}' -var='ARM_TENANT_ID=${{ vars.TF_VAR_ARM_TENANT_ID }}'
+      run: terraform plan
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: terraform apply -auto-approve -var='ARM_SUBSCRIPTION_ID=${{ vars.TF_VAR_ARM_SUBSCRIPTION_ID }}' -var='ARM_CLIENT_ID=${{ vars.TF_VAR_ARM_CLIENT_ID }}' -var 'ARM_CLIENT_SECRET=${{ secrets.TF_VAR_ARM_CLIENT_SECRET }}' -var='ARM_TENANT_ID=${{ vars.TF_VAR_ARM_TENANT_ID }}'
+      run: terraform apply -auto-approve
