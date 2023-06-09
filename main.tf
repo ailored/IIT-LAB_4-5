@@ -13,14 +13,6 @@ variable "ARM_TENANT_ID" {
 
 terraform {
 
-  cloud {
-    organization = "IIT-LAB6-IA03-TEAM5"
-
-    workspaces {
-      name = "lab6-terraform-gh-actions"
-    }
-  }
-
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
