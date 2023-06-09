@@ -5,10 +5,7 @@ sudo snap install docker
 sudo docker pull olehola/iit-lab4-5
 sudo docker pull containrrr/watchtower
 
-sudo docker run --rm -d \
---name lab6 \
--p 80:80 \
-olehola/iit-lab4-5
+sudo docker run --rm -d --name lab6 -p 80:80 olehola/iit-lab4-5
 
 sudo docker run --rm -d \
 --name watchtower \
