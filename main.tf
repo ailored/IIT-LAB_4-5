@@ -12,8 +12,7 @@ variable "ARM_TENANT_ID" {
 }
 
 terraform {
-
-  cloud {
+  backend "remote" {
     organization = "IIT-LAB6-IA03-TEAM5"
 
     workspaces {
@@ -24,12 +23,12 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.0.2"
+      version = "3.0.2"
     }
 
     tls = {
       source  = "hashicorp/tls"
-      version = "~>4.0"
+      version = "4.0"
     }
   }
 
